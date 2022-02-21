@@ -18,11 +18,15 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
-
 @app.route('/about/')
 def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
+
+@app.route('/contact')
+def contact():
+    """Render the website's contact page."""
+    return render_template('contact.html')
 
 
 ###
