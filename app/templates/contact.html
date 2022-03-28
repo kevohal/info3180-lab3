@@ -3,26 +3,27 @@
 {% block main %}
 
 <h2>Contact Form</h2>
-<span>Fill in this form to contact the site owners</span>
-    <form action="{{ url_for ('contact')}}" method="POST">
+<span>Fill in this form to contact the site owners</span> 
+    <form name= "contactForm" action="{{ url_for ('contact')}}" method="POST">
         <div class="form-group">
-            {{ form.name.label }}
+            <br>
+            {{ form.name.label }} <br>
             <span>Please enter your full name</span>
             {{ form.name(class="form-control") }} <br>
 
         </div>
         <div class="form-group">
-            {{ form.email.label}}
+            {{ form.email.label}} <br>
             <span>Please enter your e-mail address.</span>
             {{ form.email(class="form-control")}} <br>
         </div>
         <div class="form-group">
-            {{ form.subject.label}}
+            {{ form.subject.label}} <br>
             <span>Please enter the subject for your message.</span>
             {{ form.subject(class="form-control")}} <br>
         </div>
         <div class="form-group">
-            {{ form.message.label}}
+            {{ form.message.label}} <br> 
             <span>Please enter the message you would like to send.</span>
             {{ form.message(class="form-control")}} <br>
         </div>
