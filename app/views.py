@@ -43,8 +43,8 @@ def contact():
         msg.body = message
         mail.send(msg)
 
-        flash('Your message was sent successfully!')
-        return redirect('/')
+        flash('Your message was sent successfully!', 'success')
+        return redirect(url_for('home'))
 
     return render_template('contact.html', form=form)
 
